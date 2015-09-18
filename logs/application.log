@@ -1,3 +1,286 @@
-2015-08-27 14:08:49,286 - [INFO] - from play in main 
+2015-09-18 14:08:37,670 - [INFO] - from play in main 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2015-09-18 14:25:32,056 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-09-18 14:26:50,093 - [INFO] - from play in play-internal-execution-context-2 
+Application started (Dev)
+
+2015-09-18 14:28:04,789 - [INFO] - from play in play-internal-execution-context-4 
+Application started (Dev)
+
+2015-09-18 14:30:19,659 - [INFO] - from play in play-internal-execution-context-2 
+Application started (Dev)
+
+2015-09-18 14:32:03,271 - [ERROR] - from application in New I/O worker #1 
+
+
+! @6nfj9haog - Internal server error, for (POST) [/multiuploaddata] ->
+
+sbt.PlayExceptions$CompilationException: Compilation error[Cannot prove that String <:< (T, U).]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15$$anonfun$apply$16.apply(PlayReloader.scala:349) ~[na:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15$$anonfun$apply$16.apply(PlayReloader.scala:349) ~[na:na]
+	at scala.Option.map(Option.scala:133) ~[scala-library.jar:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15.apply(PlayReloader.scala:349) ~[na:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15.apply(PlayReloader.scala:346) ~[na:na]
+	at scala.Option.map(Option.scala:133) ~[scala-library.jar:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2.apply(PlayReloader.scala:346) ~[na:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2.apply(PlayReloader.scala:344) ~[na:na]
+	at scala.Either$LeftProjection.map(Either.scala:374) ~[na:na]
+	at sbt.PlayReloader$$anon$2.reload(PlayReloader.scala:344) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:106) ~[play_2.10-2.1.3.jar:2.1.3]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.1.3.jar:2.1.3]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [na:1.7.0_80]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [na:1.7.0_80]
+	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_80]
+
+2015-09-18 14:32:05,706 - [ERROR] - from application in New I/O worker #2 
+
+
+! @6nfj9heec - Internal server error, for (POST) [/multiuploaddata] ->
+
+sbt.PlayExceptions$CompilationException: Compilation error[Cannot prove that String <:< (T, U).]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15$$anonfun$apply$16.apply(PlayReloader.scala:349) ~[na:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15$$anonfun$apply$16.apply(PlayReloader.scala:349) ~[na:na]
+	at scala.Option.map(Option.scala:133) ~[scala-library.jar:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15.apply(PlayReloader.scala:349) ~[na:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15.apply(PlayReloader.scala:346) ~[na:na]
+	at scala.Option.map(Option.scala:133) ~[scala-library.jar:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2.apply(PlayReloader.scala:346) ~[na:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2.apply(PlayReloader.scala:344) ~[na:na]
+	at scala.Either$LeftProjection.map(Either.scala:374) ~[na:na]
+	at sbt.PlayReloader$$anon$2.reload(PlayReloader.scala:344) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:106) ~[play_2.10-2.1.3.jar:2.1.3]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.1.3.jar:2.1.3]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [na:1.7.0_80]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [na:1.7.0_80]
+	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_80]
+
+2015-09-18 14:33:14,970 - [INFO] - from play in play-internal-execution-context-4 
+Application started (Dev)
+
+2015-09-18 14:34:20,011 - [ERROR] - from application in New I/O worker #2 
+
+
+! @6nfj9p561 - Internal server error, for (POST) [/multiuploaddata] ->
+
+sbt.PlayExceptions$CompilationException: Compilation error[value as is not a member of scala.collection.immutable.Iterable[play.api.libs.json.JsValue]]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15$$anonfun$apply$16.apply(PlayReloader.scala:349) ~[na:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15$$anonfun$apply$16.apply(PlayReloader.scala:349) ~[na:na]
+	at scala.Option.map(Option.scala:133) ~[scala-library.jar:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15.apply(PlayReloader.scala:349) ~[na:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15.apply(PlayReloader.scala:346) ~[na:na]
+	at scala.Option.map(Option.scala:133) ~[scala-library.jar:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2.apply(PlayReloader.scala:346) ~[na:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2.apply(PlayReloader.scala:344) ~[na:na]
+	at scala.Either$LeftProjection.map(Either.scala:374) ~[na:na]
+	at sbt.PlayReloader$$anon$2.reload(PlayReloader.scala:344) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:106) ~[play_2.10-2.1.3.jar:2.1.3]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.1.3.jar:2.1.3]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [na:1.7.0_80]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [na:1.7.0_80]
+	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_80]
+
+2015-09-18 14:34:21,608 - [ERROR] - from application in New I/O worker #3 
+
+
+! @6nfj9p7fc - Internal server error, for (POST) [/multiuploaddata] ->
+
+sbt.PlayExceptions$CompilationException: Compilation error[value as is not a member of scala.collection.immutable.Iterable[play.api.libs.json.JsValue]]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15$$anonfun$apply$16.apply(PlayReloader.scala:349) ~[na:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15$$anonfun$apply$16.apply(PlayReloader.scala:349) ~[na:na]
+	at scala.Option.map(Option.scala:133) ~[scala-library.jar:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15.apply(PlayReloader.scala:349) ~[na:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15.apply(PlayReloader.scala:346) ~[na:na]
+	at scala.Option.map(Option.scala:133) ~[scala-library.jar:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2.apply(PlayReloader.scala:346) ~[na:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2.apply(PlayReloader.scala:344) ~[na:na]
+	at scala.Either$LeftProjection.map(Either.scala:374) ~[na:na]
+	at sbt.PlayReloader$$anon$2.reload(PlayReloader.scala:344) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:106) ~[play_2.10-2.1.3.jar:2.1.3]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.1.3.jar:2.1.3]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [na:1.7.0_80]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [na:1.7.0_80]
+	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_80]
+
+2015-09-18 14:35:54,799 - [INFO] - from play in play-internal-execution-context-3 
+Application started (Dev)
+
+2015-09-18 14:35:54,887 - [ERROR] - from play in play-internal-execution-context-1 
+Cannot invoke the action, eventually got an error: play.api.libs.json.JsResultException: JsResultException(errors:List((/sold,List(ValidationError(validate.error.missing-path,WrappedArray()))), (/date,List(ValidationError(validate.error.missing-path,WrappedArray()))), (/stock,List(ValidationError(validate.error.missing-path,WrappedArray()))), (/ean,List(ValidationError(validate.error.missing-path,WrappedArray()))), (/brand,List(ValidationError(validate.error.missing-path,WrappedArray()))), (/userid,List(ValidationError(validate.error.missing-path,WrappedArray()))), (/condition,List(ValidationError(validate.error.missing-path,WrappedArray()))), (/productname,List(ValidationError(validate.error.missing-path,WrappedArray()))), (/category,List(ValidationError(validate.error.missing-path,WrappedArray()))), (/price,List(ValidationError(validate.error.missing-path,WrappedArray())))))
+
+2015-09-18 14:35:54,909 - [ERROR] - from application in play-internal-execution-context-1 
+
+
+! @6nfja4ffo - Internal server error, for (POST) [/multiuploaddata] ->
+
+play.api.Application$$anon$1: Execution exception[[JsResultException: JsResultException(errors:List((/sold,List(ValidationError(validate.error.missing-path,WrappedArray()))), (/date,List(ValidationError(validate.error.missing-path,WrappedArray()))), (/stock,List(ValidationError(validate.error.missing-path,WrappedArray()))), (/ean,List(ValidationError(validate.error.missing-path,WrappedArray()))), (/brand,List(ValidationError(validate.error.missing-path,WrappedArray()))), (/userid,List(ValidationError(validate.error.missing-path,WrappedArray()))), (/condition,List(ValidationError(validate.error.missing-path,WrappedArray()))), (/productname,List(ValidationError(validate.error.missing-path,WrappedArray()))), (/category,List(ValidationError(validate.error.missing-path,WrappedArray()))), (/price,List(ValidationError(validate.error.missing-path,WrappedArray())))))]]
+	at play.api.Application$class.handleError(Application.scala:289) ~[play_2.10-2.1.3.jar:2.1.3]
+	at play.api.DefaultApplication.handleError(Application.scala:383) [play_2.10-2.1.3.jar:2.1.3]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$handleAction$1$2$$anonfun$apply$21.apply(PlayDefaultUpstreamHandler.scala:415) [play_2.10-2.1.3.jar:2.1.3]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$handleAction$1$2$$anonfun$apply$21.apply(PlayDefaultUpstreamHandler.scala:415) [play_2.10-2.1.3.jar:2.1.3]
+	at scala.Option.map(Option.scala:145) [scala-library.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$handleAction$1$2.apply(PlayDefaultUpstreamHandler.scala:415) [play_2.10-2.1.3.jar:2.1.3]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$handleAction$1$2.apply(PlayDefaultUpstreamHandler.scala:410) [play_2.10-2.1.3.jar:2.1.3]
+	at play.api.libs.concurrent.PlayPromise$$anonfun$extend1$1.apply(Promise.scala:113) [play_2.10-2.1.3.jar:2.1.3]
+	at play.api.libs.concurrent.PlayPromise$$anonfun$extend1$1.apply(Promise.scala:113) [play_2.10-2.1.3.jar:2.1.3]
+	at play.api.libs.concurrent.PlayPromise$$anonfun$extend$1$$anonfun$apply$1.apply(Promise.scala:104) [play_2.10-2.1.3.jar:2.1.3]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [na:1.7.0_80]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [na:1.7.0_80]
+	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_80]
+play.api.libs.json.JsResultException: JsResultException(errors:List((/sold,List(ValidationError(validate.error.missing-path,WrappedArray()))), (/date,List(ValidationError(validate.error.missing-path,WrappedArray()))), (/stock,List(ValidationError(validate.error.missing-path,WrappedArray()))), (/ean,List(ValidationError(validate.error.missing-path,WrappedArray()))), (/brand,List(ValidationError(validate.error.missing-path,WrappedArray()))), (/userid,List(ValidationError(validate.error.missing-path,WrappedArray()))), (/condition,List(ValidationError(validate.error.missing-path,WrappedArray()))), (/productname,List(ValidationError(validate.error.missing-path,WrappedArray()))), (/category,List(ValidationError(validate.error.missing-path,WrappedArray()))), (/price,List(ValidationError(validate.error.missing-path,WrappedArray())))))
+	at play.api.libs.json.JsValue$$anonfun$2.apply(JsValue.scala:67) ~[play_2.10-2.1.3.jar:2.1.3]
+	at play.api.libs.json.JsValue$$anonfun$2.apply(JsValue.scala:67) ~[play_2.10-2.1.3.jar:2.1.3]
+	at play.api.libs.json.JsResult$class.fold(JsResult.scala:69) ~[play_2.10-2.1.3.jar:2.1.3]
+	at play.api.libs.json.JsError.fold(JsResult.scala:10) ~[play_2.10-2.1.3.jar:2.1.3]
+	at play.api.libs.json.JsValue$class.as(JsValue.scala:65) ~[play_2.10-2.1.3.jar:2.1.3]
+	at play.api.libs.json.JsArray.as(JsValue.scala:118) ~[play_2.10-2.1.3.jar:2.1.3]
+	at controllers.Products$$anonfun$multiuploaddata$1.apply(Products.scala:212) ~[na:na]
+	at controllers.Products$$anonfun$multiuploaddata$1.apply(Products.scala:200) ~[na:na]
+	at play.api.mvc.ActionBuilder$$anon$1.apply(Action.scala:217) ~[play_2.10-2.1.3.jar:2.1.3]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:109) ~[play_2.10-2.1.3.jar:2.1.3]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:109) ~[play_2.10-2.1.3.jar:2.1.3]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:18) ~[play_2.10-2.1.3.jar:2.1.3]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:108) ~[play_2.10-2.1.3.jar:2.1.3]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:106) ~[play_2.10-2.1.3.jar:2.1.3]
+	at scala.Option.map(Option.scala:145) [scala-library.jar:na]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2.apply(Action.scala:106) ~[play_2.10-2.1.3.jar:2.1.3]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2.apply(Action.scala:99) ~[play_2.10-2.1.3.jar:2.1.3]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:137) ~[akka-actor_2.10-2.1.0.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1417) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:262) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:975) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1478) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:104) ~[scala-library.jar:na]
+
+2015-09-18 14:47:53,855 - [ERROR] - from application in New I/O worker #5 
+
+
+! @6nfjbjd3i - Internal server error, for (POST) [/multiuploaddata] ->
+
+sbt.PlayExceptions$CompilationException: Compilation error[not found: value mapping]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15$$anonfun$apply$16.apply(PlayReloader.scala:349) ~[na:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15$$anonfun$apply$16.apply(PlayReloader.scala:349) ~[na:na]
+	at scala.Option.map(Option.scala:133) ~[scala-library.jar:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15.apply(PlayReloader.scala:349) ~[na:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15.apply(PlayReloader.scala:346) ~[na:na]
+	at scala.Option.map(Option.scala:133) ~[scala-library.jar:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2.apply(PlayReloader.scala:346) ~[na:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2.apply(PlayReloader.scala:344) ~[na:na]
+	at scala.Either$LeftProjection.map(Either.scala:374) ~[na:na]
+	at sbt.PlayReloader$$anon$2.reload(PlayReloader.scala:344) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:106) ~[play_2.10-2.1.3.jar:2.1.3]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.1.3.jar:2.1.3]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [na:1.7.0_80]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [na:1.7.0_80]
+	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_80]
+
+2015-09-18 14:48:35,552 - [ERROR] - from application in New I/O worker #6 
+
+
+! @6nfjblmla - Internal server error, for (POST) [/multiuploaddata] ->
+
+sbt.PlayExceptions$CompilationException: Compilation error[not found: value mapping]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15$$anonfun$apply$16.apply(PlayReloader.scala:349) ~[na:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15$$anonfun$apply$16.apply(PlayReloader.scala:349) ~[na:na]
+	at scala.Option.map(Option.scala:133) ~[scala-library.jar:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15.apply(PlayReloader.scala:349) ~[na:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15.apply(PlayReloader.scala:346) ~[na:na]
+	at scala.Option.map(Option.scala:133) ~[scala-library.jar:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2.apply(PlayReloader.scala:346) ~[na:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2.apply(PlayReloader.scala:344) ~[na:na]
+	at scala.Either$LeftProjection.map(Either.scala:374) ~[na:na]
+	at sbt.PlayReloader$$anon$2.reload(PlayReloader.scala:344) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:106) ~[play_2.10-2.1.3.jar:2.1.3]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.1.3.jar:2.1.3]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [na:1.7.0_80]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [na:1.7.0_80]
+	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_80]
+
+2015-09-18 14:55:44,854 - [INFO] - from play in play-internal-execution-context-2 
+Application started (Dev)
+
+2015-09-18 14:56:53,532 - [INFO] - from play in play-internal-execution-context-3 
+Application started (Dev)
+
+2015-09-18 14:58:04,744 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-09-18 17:01:55,755 - [INFO] - from play in play-internal-execution-context-3 
+Application started (Dev)
+
+2015-09-18 17:03:16,872 - [INFO] - from play in play-internal-execution-context-2 
+Application started (Dev)
+
+2015-09-18 17:03:16,925 - [ERROR] - from play in play-internal-execution-context-1 
+Cannot invoke the action, eventually got an error: java.lang.ClassCastException: scala.collection.immutable.MapLike$$anon$2 cannot be cast to scala.collection.parallel.ParIterable
+
+2015-09-18 17:03:16,928 - [ERROR] - from application in play-internal-execution-context-1 
+
+
+! @6nfk3dhdi - Internal server error, for (POST) [/multiuploaddata] ->
+
+play.api.Application$$anon$1: Execution exception[[ClassCastException: scala.collection.immutable.MapLike$$anon$2 cannot be cast to scala.collection.parallel.ParIterable]]
+	at play.api.Application$class.handleError(Application.scala:289) ~[play_2.10-2.1.3.jar:2.1.3]
+	at play.api.DefaultApplication.handleError(Application.scala:383) [play_2.10-2.1.3.jar:2.1.3]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$handleAction$1$2$$anonfun$apply$21.apply(PlayDefaultUpstreamHandler.scala:415) [play_2.10-2.1.3.jar:2.1.3]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$handleAction$1$2$$anonfun$apply$21.apply(PlayDefaultUpstreamHandler.scala:415) [play_2.10-2.1.3.jar:2.1.3]
+	at scala.Option.map(Option.scala:145) [scala-library.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$handleAction$1$2.apply(PlayDefaultUpstreamHandler.scala:415) [play_2.10-2.1.3.jar:2.1.3]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$handleAction$1$2.apply(PlayDefaultUpstreamHandler.scala:410) [play_2.10-2.1.3.jar:2.1.3]
+	at play.api.libs.concurrent.PlayPromise$$anonfun$extend1$1.apply(Promise.scala:113) [play_2.10-2.1.3.jar:2.1.3]
+	at play.api.libs.concurrent.PlayPromise$$anonfun$extend1$1.apply(Promise.scala:113) [play_2.10-2.1.3.jar:2.1.3]
+	at play.api.libs.concurrent.PlayPromise$$anonfun$extend$1$$anonfun$apply$1.apply(Promise.scala:104) [play_2.10-2.1.3.jar:2.1.3]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [na:1.7.0_80]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [na:1.7.0_80]
+	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_80]
+java.lang.ClassCastException: scala.collection.immutable.MapLike$$anon$2 cannot be cast to scala.collection.parallel.ParIterable
+	at scala.collection.parallel.package$$anon$2.asParIterable(package.scala:73) ~[scala-library.jar:na]
+	at controllers.Products$$anonfun$multiuploaddata$1.apply(Products.scala:211) ~[na:na]
+	at controllers.Products$$anonfun$multiuploaddata$1.apply(Products.scala:201) ~[na:na]
+	at play.api.mvc.ActionBuilder$$anon$1.apply(Action.scala:217) ~[play_2.10-2.1.3.jar:2.1.3]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:109) ~[play_2.10-2.1.3.jar:2.1.3]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:109) ~[play_2.10-2.1.3.jar:2.1.3]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:18) ~[play_2.10-2.1.3.jar:2.1.3]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:108) ~[play_2.10-2.1.3.jar:2.1.3]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:106) ~[play_2.10-2.1.3.jar:2.1.3]
+	at scala.Option.map(Option.scala:145) [scala-library.jar:na]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2.apply(Action.scala:106) ~[play_2.10-2.1.3.jar:2.1.3]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2.apply(Action.scala:99) ~[play_2.10-2.1.3.jar:2.1.3]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:137) ~[akka-actor_2.10-2.1.0.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1417) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:262) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:975) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1478) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:104) ~[scala-library.jar:na]
+
+2015-09-18 17:06:46,320 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-09-18 17:11:01,326 - [INFO] - from play in play-internal-execution-context-2 
+Application started (Dev)
+
+2015-09-18 17:14:06,091 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
 

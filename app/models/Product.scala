@@ -4,6 +4,8 @@ import java.util.Date
 import java.text.SimpleDateFormat
 import org.joda.time.DateTime
 
+
+case class UserData(name: String, age: Int)
 /**
  * An entry in the product catalogue.
  *
