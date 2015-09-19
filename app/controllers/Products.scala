@@ -23,7 +23,9 @@ import play.api.libs.json._
 // you need this import to have combinators
 import play.api.libs.functional.syntax._
 
-
+import play.api.data._
+import play.api.data.Forms._
+import play.api.data.format.Formats._
 /**
  * Controller for products HTTP interface.
  */
@@ -52,6 +54,14 @@ object Products extends Controller {
 //      "category" -> String,
 //      "condition" -> String)(Product.apply)(Product.unapply)
 //  )
+case class UserData(name: String, age: Int)
+
+  val userForm = Form(
+    mapping(
+      "name" -> text,
+      "age" -> number
+    )(UserData.apply)(UserData.unapply)
+  )
 
   /**
    * Returns an array of products’ EAN codes.
@@ -199,6 +209,7 @@ object Products extends Controller {
 
   def multiuploaddata = Action(parse.multipartFormData) {
     request =>
+
 //      println("my body: " + request.body.dataParts)
 
 //      request.body.files.map { image =>
