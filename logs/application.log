@@ -1,6 +1,18 @@
-2015-09-18 17:27:53,344 - [INFO] - from play in main 
+2015-09-21 10:24:31,515 - [INFO] - from play in main 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2015-09-18 17:30:47,656 - [INFO] - from play in play-internal-execution-context-1 
+2015-09-21 10:27:02,944 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-09-21 10:31:09,721 - [INFO] - from play in play-internal-execution-context-2 
+Application started (Dev)
+
+2015-09-21 10:33:07,944 - [INFO] - from play in play-internal-execution-context-3 
+Application started (Dev)
+
+2015-09-21 10:33:43,825 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-09-21 10:35:54,339 - [INFO] - from play in play-internal-execution-context-3 
 Application started (Dev)
 

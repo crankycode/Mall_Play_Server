@@ -3,17 +3,19 @@ package controllers
 import java.io.File
 
 import org.codehaus.jackson.JsonNode
+import org.codehaus.jackson.annotate.JsonTypeInfo.As
+import org.joda.time.format.ISODateTimeFormat
 import play.api.data._
 import play.api.data.Form._
+import play.api.data.format.{Formats, Formatter}
 import play.api.libs.json
 import play.api.mvc._
 import play.api.mvc.Controller
-import models.Product
-import models.UserData
+import models.{PathDate, Product, UserData}
 import play.api.libs.json._
 import play.api.libs.functional.syntax._
 import play.api.Logger
-import java.util.Date
+import java.util.{TimeZone, Date}
 
 import play.mvc.Http
 
@@ -26,11 +28,16 @@ import play.api.libs.functional.syntax._
 import play.api.data._
 import play.api.data.Forms._
 import play.api.data.format.Formats._
+
+import models.Product1
 /**
  * Controller for products HTTP interface.
  */
 object Products extends Controller {
 
+  /**
+   * Default formatter for the `Double` type.
+   */
 
   import org.joda.time.DateTime
 
@@ -54,13 +61,64 @@ object Products extends Controller {
 //      "category" -> String,
 //      "condition" -> String)(Product.apply)(Product.unapply)
 //  )
-case class UserData(name: String, age: Int)
 
+  private def parsing[T](parse: String => T, errMsg: String, errArgs: Seq[Any])(key: String, data: Map[String, String]): Either[Seq[FormError], T] = {
+    stringFormat.bind(key, data).right.flatMap { s =>
+      println("The Data is: " + data("date"))
+      scala.util.control.Exception.allCatch[T]
+        .either(parse(s))
+        .left.map(e => Seq(FormError(key, errMsg, errArgs)))
+    }
+  }
+
+  def dateFormat(pattern: String, timeZone: TimeZone = TimeZone.getDefault): Formatter[Date] = new Formatter[Date] {
+
+    val jodaTimeZone = org.joda.time.DateTimeZone.forTimeZone(timeZone)
+    val formatter = org.joda.time.format.DateTimeFormat.forPattern(pattern).withZone(jodaTimeZone)
+    def dateParse(data: String) = {formatter.parseDateTime(data).toDate}
+
+    override val format = Some(("format.date", Seq(pattern)))
+
+    def bind(key: String, data: Map[String, String]) = parsing(dateParse, "error.date", Nil)(key, data)
+
+    def unbind(key: String, value: Date) = Map(key -> formatter.print(new org.joda.time.DateTime(value).withZone(jodaTimeZone)))
+  }
+
+  /**
+   * Default formatter for the `java.util.Date` type with pattern `yyyy-MM-dd`.
+   */
+  implicit val dateFormat: Formatter[Date] = dateFormat("yyyy-MM-dd")
+
+  val format = new java.text.SimpleDateFormat("yyyy-MM-dd")
+  format.format(new java.util.Date())
   val userForm = Form(
     mapping(
-      "name" -> text,
-      "age" -> number
-    )(UserData.apply)(UserData.unapply)
+      "ean" -> text,
+      "date" -> date,
+      "sold" -> boolean,
+      "productname" -> text,
+      "userid" -> text,
+      "price" -> of(doubleFormat),
+      "stock" -> number,
+      "brand" -> text,
+      "category" -> text ,
+      "condition" -> text
+    )(Product.apply)(Product.unapply)
+  )
+
+  val userForm1 = Form(
+    mapping(
+      "ean" -> text,
+      "date" -> longNumber,
+      "sold" -> boolean,
+      "productname" -> text,
+      "userid" -> text,
+      "price" -> of(doubleFormat),
+      "stock" -> number,
+      "brand" -> text,
+      "category" -> text ,
+      "condition" -> text
+    )(Product1.apply)(Product1.unapply)
   )
 
   /**
@@ -206,10 +264,10 @@ case class UserData(name: String, age: Int)
 
 
 
+  def multiuploaddata  = Action(parse.multipartFormData) {
+   implicit request =>
 
-  def multiuploaddata = Action(parse.multipartFormData) {
-    request =>
-
+//     val mydate = new Date("2009-01-29")
 //      println("my body: " + request.body.dataParts)
 
 //      request.body.files.map { image =>
@@ -219,8 +277,36 @@ case class UserData(name: String, age: Int)
 //        //      val contentType = picture.contentType
 //      }
 
-      val raw = request.body.dataParts.map(x => x._2)
-      println(raw)
+
+//      userForm.bindFromRequest()(request).fold (
+//        errFrm =>{
+//          println("Binding Failed")
+//          println(errFrm.errors)
+//        },
+//        userData => {
+//          println("Success bind: " + userData.ean)
+//        }
+//      )
+
+     userForm1.bindFromRequest()(request).fold (
+       errFrm =>{
+         println("Binding Failed")
+         println(errFrm.errors)
+       },
+       userData => {
+         println("Success bind: " + userData.ean)
+       }
+     )
+
+     val datetime = new Date(1442802362000L)
+     println("The date time is: " + datetime)
+
+      println(request.body.dataParts)
+
+//      sp.map { product => println(product)}
+
+//      val raw = request.body.dataParts.map(x => x._2)
+//      println(raw)
 //      println(body)
 //      val raw = request.body.dataParts.map(x => x._2)
 
